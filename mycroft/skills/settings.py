@@ -20,10 +20,11 @@
     settings.
 
     The GUI for the setting is described by a file in the skill's root
-    directory called settingsmeta.json.  The "name" is associates the
-    user-interface field with the setting name in the dictionary.  For
-    example, you might have a setting['username'].  In the settingsmeta
-    you can describe the interface you want to edit that value with:
+    directory called settingsmeta.json (or settingsmeta.yaml, if you
+    prefer working with yaml). The "name" associates the user-interface
+    field with the setting name in the dictionary. For example, you
+    might have a setting['username'].  In the settingsmeta you can
+    describe the interface you want to edit that value with:
         ...
         "fields": [
                {
@@ -61,6 +62,7 @@
 import json
 import hashlib
 import os
+import yaml
 from threading import Timer
 from os.path import isfile, join, expanduser
 from requests.exceptions import RequestException, HTTPError
