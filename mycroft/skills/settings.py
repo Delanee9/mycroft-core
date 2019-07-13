@@ -62,7 +62,6 @@
 import json
 import hashlib
 import os
-import yaml
 from threading import Timer
 from os.path import isfile, join, expanduser
 from requests.exceptions import RequestException, HTTPError
